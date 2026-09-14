@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #1c2333;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@keyframes blink-caret {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.typing-caret::after {
+  content: '|';
+  animation: blink-caret 0.9s step-end infinite;
+  margin-left: 2px;
+  color: #e3a531;
+}
